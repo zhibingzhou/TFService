@@ -43,6 +43,7 @@ func init() {
 var gdb Gorm
 
 func ReloadConf(file_name string) {
+	redis.ReloadConf("")
 	if file_name == "" {
 		file_name = "./conf/database.json"
 	}
